@@ -1,0 +1,41 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Definindo os dados manualmente para demonstração
+data = {'Data': ['2024-01-01', '2024-01-02', '2024-01-03'],
+        'Quantidade': [100, 150, 200],
+        'Receita': [1000, 1500, 2000],
+        'Lucro': [500, 750, 1000]}
+
+# Criando o DataFrame
+df = pd.DataFrame(data)
+
+# Gráfico 1: Quantidade de itens vendidos ao longo do tempo
+plt.figure(figsize=(10, 5))
+plt.plot(df['Data'], df['Quantidade'], label='Quantidade de itens vendidos', color='blue')
+plt.xlabel('Data')
+plt.ylabel('Quantidade')
+plt.title('Quantidade de itens vendidos ao longo do tempo')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Gráfico 2: Receita em dinheiro ao longo do tempo
+plt.figure(figsize=(10, 5))
+plt.plot(df['Data'], df['Receita'], label='Receita em dinheiro', color='green')
+plt.xlabel('Data')
+plt.ylabel('Receita ($)')
+plt.title('Receita em dinheiro ao longo do tempo')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Gráfico 3: Lucro ao longo do tempo
+plt.figure(figsize=(10, 5))
+plt.plot(df['Data'], df['Lucro'], label='Lucro', color='orange')
+plt.xlabel('Data')
+plt.ylabel('Lucro ($)')
+plt.title('Lucro ao longo do tempo')
+plt.legend()
+plt.grid(True)
+plt.show()
